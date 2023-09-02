@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: 'http://localhost:8000/api/students/',
+    baseURL: "https://library-phi-nine.vercel.app/api/students/",
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
