@@ -12,7 +12,7 @@ const AdminHomePage = () => {
                     <Grid>
                         <Grid.Row>
                             <Grid.Column style={{width: "400px", margin: "auto"}}>
-                                <Image style={{width: "400px"}} src="http://localhost:8000/media/library.jpg" />
+                                <Image style={{width: "400px"}} src="images/library.jpg" />
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
