@@ -39,7 +39,7 @@ const Home = () => {
                                         output = "Book already issued"
                                     }
                                     return(
-                                        <Grid.Column width={4}>
+                                        <Grid.Column width={4} style={{padding: '1em 1em'}}>
                                             <Segment raised>
                                                 <Grid>
                                                     <Grid.Row>
