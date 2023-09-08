@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import API from "../services/API";
 import moment from 'moment';
 import Headers from "./Headers";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Footer from "./Footer";
 import axios from "axios";
 import { Button, Container, Divider, Grid, Header, Icon, Image, List, Segment } from "semantic-ui-react";
@@ -24,6 +24,8 @@ const Home = () => {
          .catch(console.error)
     }
 
+    const params = useParams()
+
     return(
         <div>
             <Segment vertical  style={{padding: '3em 0em'}}>
@@ -38,6 +40,11 @@ const Home = () => {
                                     }else{
                                         output = "Book already issued"
                                     }
+
+                                    let lastItemId = params.pageno * 4
+                                    let firstItemId = lastItemId - 3
+                                    
+                                    if(book.id >= firstItemId && book.id <= lastItemId){
                                     return(
                                         <Grid.Column width={4} style={{padding: '1em 1em'}}>
                                             <Segment raised>
@@ -81,9 +88,15 @@ const Home = () => {
                                             </Segment>
                                         </Grid.Column>
                                     )
+                                    }
                                 })
                             }
-                        </Grid.Row>    
+                        </Grid.Row> 
+                        <Grid.Row>
+                            <Grid.Column textAlign="center">
+                                <PaginationComponent />
+                            </Grid.Column>
+                        </Grid.Row>   
                     </Grid>
                 </Container>
             </Segment>
