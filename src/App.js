@@ -35,6 +35,8 @@ import DesktopIssueABook from "./components/DesktopIssueABook";
 import MobileBooksIssued from "./components/MobileBooksIssued";
 import DesktopBooksIssued from "./components/DesktopBooksIssued";
 import PaginationComponent from "./components/PaginationComponent";
+import DesktopContainerPagination from "./components/DesktopContainerPagination";
+import MobileContainerPagination from "./components/MobileContainerPagination";
 
 
 const { MediaContextProvider, Media } = createMedia({
@@ -53,7 +55,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route index element={<MobileContainer />} />
-              <Route index path='/:pageno' element={<MobileContainer />} />
+              <Route index path='/:pageno' element={<MobileContainerPagination />} />
               <Route path='issueabook' element={<MobileIssueABook />} />
               <Route path='booksissued' element={<MobileBooksIssued />} />
               <Route path='bookdetails/:author_name/:book_id' element={<MobileBookDetails />} />
@@ -77,7 +79,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route index element={<DesktopContainer />} />
-              <Route index path='/:pageno' element={<DesktopContainer />} />
+              <Route index path='/:pageno' element={<DesktopContainerPagination />} />
               <Route path='issueabook' element={<DesktopIssueABook />} />
               <Route path='booksissued' element={<DesktopBooksIssued />} />
               <Route path='bookdetails/:author_name/:book_id' element={<DesktopBookDetails />} />

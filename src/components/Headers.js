@@ -47,7 +47,7 @@ const Headers = () => {
                     >
                         <Container>
                             <Menu.Item as='a'>
-                                <h3>Library System</h3>
+                                <Link to="/"><h3>Library System</h3></Link>
                             </Menu.Item>
                             <Menu.Item as='a' position="right">
                                 <Link to="/" style={{color: '#000'}}>Home</Link>

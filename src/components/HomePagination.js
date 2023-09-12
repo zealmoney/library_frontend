@@ -10,7 +10,7 @@ import { Button, Container, Divider, Grid, Header, Icon, Image, List, Segment } 
 import PaginationComponent from "./PaginationComponent";
 
 
-const Home = () => {
+const HomePagination = () => {
     const [books, setBooks] = useState([])
 
     useEffect(() => {
@@ -44,7 +44,7 @@ const Home = () => {
                                     let lastItemId = params.pageno * 4
                                     let firstItemId = lastItemId - 3
                                     
-                                    if(book.id >= 1 && book.id <= 4){
+                                    if(book.id >= firstItemId && book.id <= lastItemId){
                                     return(
                                         <Grid.Column width={4} style={{padding: '1em 1em'}}>
                                             <Segment raised>
@@ -104,4 +104,4 @@ const Home = () => {
     )
 };
 
-export default Home;
+export default HomePagination;
