@@ -41,10 +41,10 @@ const Home = () => {
                                         output = "Book already issued"
                                     }
 
-                                    let lastItemId = params.pageno * 4
-                                    let firstItemId = lastItemId - 3
+                                    let lastItemId = params.pageno * 8
+                                    let firstItemId = lastItemId - 7
                                     
-                                    if(book.id >= 1 && book.id <= 4){
+                                    if(book.id >= 1 && book.id <= 8){
                                     return(
                                         <Grid.Column width={4} style={{padding: '1em 1em'}}>
                                             <Segment raised>
@@ -54,7 +54,7 @@ const Home = () => {
                                                                 <Header 
                                                                     content={book.name.substring(0, 25)}
                                                                 />                                                        
-                                                            <Image centered fluid src={book.book_image} />
+                                                            <Image centered fluid src={"https://res.cloudinary.com/dfsyvrhom/" + book.book_image} />
                                                         </Grid.Column>
                                                     </Grid.Row>
                                                     <Grid.Row>

@@ -150,7 +150,7 @@ const IssueABook = () => {
                                                                 return(
                                                                     <Table.Row key={book.id}>
                                                                         <Table.Cell>
-                                                                            <Image className="ui avatar image" src={book.book_image} />
+                                                                            <Image className="ui avatar image" src={"https://res.cloudinary.com/dfsyvrhom/" + book.book_image} />
                                                                         </Table.Cell>
                                                                         <Table.Cell>
                                                                             {book.book_id}

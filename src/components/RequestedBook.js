@@ -26,7 +26,7 @@ const RequestedBook = () => {
 
     return(
        <div>
-            <Segment vertical style={{padding: '3em 0em'}}>
+            <Segment vertical style={{padding: '6em 0em'}}>
                 <Container>
                     <Grid stackable>
                         <Grid.Row>
@@ -63,7 +63,7 @@ const RequestedBook = () => {
                                                                     if(book.student_id == session_id){
                                                                         return(
                                                                             <Table.Row>
-                                                                                <Table.Cell><Image src={book.book_image} className="ui avatar image" /></Table.Cell>
+                                                                                <Table.Cell><Image src={"https://res.cloudinary.com/dfsyvrhom/" + book.book_image} className="ui avatar image" /></Table.Cell>
                                                                                 <Table.Cell>{book.book_id}</Table.Cell>
                                                                                 <Table.Cell>{book.book_name}</Table.Cell>
                                                                                 <Table.Cell>{book.student_id}</Table.Cell>

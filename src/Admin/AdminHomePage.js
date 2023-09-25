@@ -7,7 +7,7 @@ const AdminHomePage = () => {
     return(
         <div>
             <Admin_Headers />
-            <Segment vertical style={{padding: '5em 0em'}}>
+            <Segment vertical style={{padding: '10em 0em'}}>
                 <Container>
                     <Grid>
                         <Grid.Row>

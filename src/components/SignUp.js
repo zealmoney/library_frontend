@@ -54,7 +54,7 @@ const SignUp = () => {
 
     return(
         <div>
-            <Segment vertical style={{padding: '3em 0em'}}>
+            <Segment vertical style={{padding: '5em 0em'}}>
                 <Container>
                     <Grid textAlign="center">
                         <Grid.Row>

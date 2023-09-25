@@ -56,7 +56,7 @@ const BookDetails = () => {
 
     return(
         <div>
-            <Segment vertical  style={{padding: '3em 0em'}}>
+            <Segment vertical  style={{padding: '6em 0em'}}>
                 <Container>
                     <Grid stackable>
                         {
@@ -68,7 +68,7 @@ const BookDetails = () => {
                                                 <Grid.Row> 
                                                     <Grid.Column  width={4}>
                                                         <Segment vertical style={{paddingTop: '0em'}}>
-                                                            <Image fluid src={book.book_image} />
+                                                            <Image fluid src={"https://res.cloudinary.com/dfsyvrhom/" + book.book_image} />
                                                         </Segment>
                                                     </Grid.Column>
                                                     <Grid.Column  width={6}>
@@ -136,7 +136,7 @@ const BookDetails = () => {
                                                                     <Grid.Column>
                                                                         <List size="large" relaxed divided>
                                                                             <List.Item>
-                                                                                <Image src={author.author_image} className="ui avatar image" />
+                                                                                <Image src={"https://res.cloudinary.com/dfsyvrhom/" + author.author_image} className="ui avatar image" />
                                                                                 {author.name}
                                                                             </List.Item>
                                                                             <List.Item>

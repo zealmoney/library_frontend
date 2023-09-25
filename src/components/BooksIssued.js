@@ -33,7 +33,7 @@ const BooksIssued = () => {
     
     return(
         <div className="">
-            <Segment vertical style={{padding: '3em 0em'}}>
+            <Segment vertical style={{padding: '5em 0em'}}>
                 <Container>
                     <Grid stackable>
                         <Grid.Row>
@@ -45,7 +45,7 @@ const BooksIssued = () => {
                                                 return(
                                                     <Grid.Column width={4}>
                                                         <Segment>
-                                                            <Image centered fluid src={newBook.book_image}  />
+                                                            <Image centered fluid src={"https://res.cloudinary.com/dfsyvrhom/" + newBook.book_image}  />
                                                             <List relaxed divided>
                                                                 <List.Item>{newBook.name}</List.Item>
                                                                 <List.Item>{moment(book.dateissued).format('MMMM Do YYYY')}</List.Item>

@@ -47,7 +47,7 @@ const AdminLoginPage = () => {
     return(
         <div>
             <Admin_Headers />
-            <Segment vertical style={{padding: '5em 0em'}}>
+            <Segment vertical style={{padding: '8em 0em'}}>
                 <Grid stackable textAlign="center">
                     <Grid.Row>
                         <Grid.Column style={{maxWidth: 500}}>

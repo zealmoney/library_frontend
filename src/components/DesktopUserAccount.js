@@ -7,6 +7,7 @@ const DesktopUserAccount = () => {
         <div>
             <Headers />
             <UserAccount />
+            <br/><br/><br/><br/><br/>
             <Footer />
         </div>
     )
