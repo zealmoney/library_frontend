@@ -28,9 +28,9 @@ const AdminLoginPage = () => {
 
     const adminLogin = () => {
         var count = 0
-        var password_ash = CryptoJS.SHA256(password).toString()
+        //var password_ash = CryptoJS.SHA256(password).toString()
         users.map((user) => {
-            if(username === user.username && password_ash === user.password){
+            if(user.username === username && user.password === password){
                 ++count
             }
         })
@@ -46,7 +46,7 @@ const AdminLoginPage = () => {
 
     return(
         <div>
-            <Admin_Headers />
+           <Admin_Headers />
             <Segment vertical style={{padding: '8em 0em'}}>
                 <Grid stackable textAlign="center">
                     <Grid.Row>
