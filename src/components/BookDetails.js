@@ -56,7 +56,7 @@ const BookDetails = () => {
 
     return(
         <div>
-            <Segment vertical  style={{padding: '6em 0em'}}>
+            <Segment vertical  style={{padding: '6em 0em 10em'}}>
                 <Container>
                     <Grid stackable>
                         {
