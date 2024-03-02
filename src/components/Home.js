@@ -2,20 +2,21 @@ import React from "react";
 import { useState, useEffect } from "react";
 import API from "../services/API";
 import moment from 'moment';
-import Headers from "./Headers";
 import { Link, useParams } from "react-router-dom";
-import Footer from "./Footer";
-import axios from "axios";
-import { Button, Container, Divider, Grid, Header, Icon, Image, List, Segment } from "semantic-ui-react";
+import { Button, Container, Dimmer, Grid, Header, Image, List, Loader, Segment } from "semantic-ui-react";
 import PaginationComponent from "./PaginationComponent";
 
 
 const Home = () => {
     const [books, setBooks] = useState([])
+    const [active, setActive] = useState(true)
 
     useEffect(() => {
         getBooks();
-    }, []
+        if(books.length > 0){
+            setActive(false)
+        }
+    }
     )
 
     const getBooks = () => {
@@ -26,6 +27,17 @@ const Home = () => {
 
     const params = useParams()
 
+    if(active){
+        return(
+            <Segment style={{padding: '17em 0em'}}>
+            <Dimmer inverted active={active}>
+                <Loader size="massive">
+                    Loading
+                </Loader>
+            </Dimmer>
+            </Segment>
+        )
+    }else{
     return(
         <div>
             <Segment vertical  style={{padding: '3em 0em'}}>
@@ -102,6 +114,7 @@ const Home = () => {
             </Segment>
         </div>
     )
+    }
 };
 
 export default Home;

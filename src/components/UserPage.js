@@ -100,7 +100,7 @@ const UserPage = ({mobile}) => {
                                         </Form.Field>
                                         <Form.Field style={{textAlign: 'left'}}>
                                             <span>
-                                                Already have an account? <Link to='/signup'>Click to sign up</Link>
+                                                Don't have an account? <Link to='/signup'>Click to sign up</Link>
                                             </span>
                                         </Form.Field>
                                     </Form>
