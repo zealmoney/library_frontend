@@ -305,7 +305,7 @@ const IssueABook = () => {
                                                             Issue Book
                                                         </Button>
                                                     </Form.Field>
-                                                    <span>{msg}</span>
+                                                    <span style={{color: 'red'}}>{msg}</span>
                                                 </Form>
                                             </Grid.Column>
                                         </Grid.Row> 

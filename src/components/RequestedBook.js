@@ -26,7 +26,7 @@ const RequestedBook = () => {
 
     return(
        <div>
-            <Segment vertical style={{padding: '6em 0em'}}>
+            <Segment vertical style={{padding: '6em 0em 15em'}}>
                 <Container>
                     <Grid stackable>
                         <Grid.Row>

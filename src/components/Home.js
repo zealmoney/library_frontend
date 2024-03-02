@@ -104,11 +104,13 @@ const Home = () => {
                                 })
                             }
                         </Grid.Row> 
-                        <Grid.Row>
+                        {
+                        /*<Grid.Row>
                             <Grid.Column textAlign="center">
                                 <PaginationComponent />
                             </Grid.Column>
-                        </Grid.Row>   
+                        </Grid.Row>*/
+                        }   
                     </Grid>
                 </Container>
             </Segment>

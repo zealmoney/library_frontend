@@ -34,7 +34,7 @@ const ReadBook = () => {
                         </Grid.Row>
                         {
                             docs.map((doc) => {
-                                if(doc.book_id == params.bookid){
+                                if(doc.book_id === params.bookid){
                                     return(
                                         <Segment style={{margin: '0em 1em'}}>
                                             <Container>

@@ -6,12 +6,14 @@ import API_AUTHORS from "../services/API_AUTHORS";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import API_REQUESTED_BOOKS from "../services/API_REQUESTED_BOOKS";
-import { Button, Container, Divider, Grid, Header, Icon, Image, List, Segment } from "semantic-ui-react";
+import { Button, Container, Dimmer, Divider, Grid, Header, Icon, Image, List, Loader, Segment } from "semantic-ui-react";
 
 const BookDetails = () => {
     const [books, setBooks] = useState([])
     const params = useParams()
     const [authors, setAuthors] = useState([])
+
+    const [active, setActive] = useState(true)
 
     const [msg, setMsg] = useState("")
 
@@ -29,8 +31,10 @@ const BookDetails = () => {
     useEffect(() => {
         getBooks();
         getAuthors();
-    },[]
-    )
+        if(books.length > 0){
+            setActive(false)
+        }
+    })
 
     const getAuthors = () => {
         API_AUTHORS.get("/")
@@ -54,9 +58,20 @@ const BookDetails = () => {
         }
     }
 
+    if(active){
+        return(
+            <Segment style={{padding: '17em 0em'}}>
+                <Dimmer inverted active={active}>
+                    <Loader size="massive">
+                        Loading
+                    </Loader>
+                </Dimmer>
+            </Segment>
+        )
+    }else{
     return(
         <div>
-            <Segment vertical  style={{padding: '6em 0em 10em'}}>
+            <Segment vertical  style={{padding: '6em 0em 15em'}}>
                 <Container>
                     <Grid stackable>
                         {
@@ -113,7 +128,7 @@ const BookDetails = () => {
                                                                                 >
                                                                                     Request Book
                                                                                 </Button>
-                                                                                <span>{msg}</span>
+                                                                                <span style={{color: 'red'}}>{msg}</span>
                                                                             </List.Item>
                                                                         </List>
                                                                     </Grid.Column>
@@ -163,7 +178,7 @@ const BookDetails = () => {
             </Segment>
         </div>
     )
-    
+    }
 }
 
 export default BookDetails;
